@@ -116,18 +116,18 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 20. Outline the steps involved in the boot process of XV6. What happens from the moment the computer is powered on to when the XV6 kernel is loaded into memory?
 
 ## Answers
-Please write your answers here
-1- A unix-like operating system
-2- BSD
-3- simple
-4- As interrupts
-5- 64 (not in the options listed) (NPROC 64)
-6- Sh
-7- Round-robin scheduling
-8- Paging
-9- Both b and c
-10- No
-11- MIT
+Please write your answers here 
+1- A unix-like operating system 
+2- BSD 
+3- simple 
+4- As interrupts 
+5- 64 (not in the options listed) (NPROC 64) 
+6- Sh 
+7- Round-robin scheduling 
+8- Paging 
+9- Both b and c 
+10- No 
+11- MIT 
 
 12- In XV6 operating system, a process can be in the following 6 states:
     UNUSED: The process is not in use or has been terminated.
@@ -150,12 +150,12 @@ Buffer Cache: Caches frequently accessed disk blocks in memory.
 
 14- 
 System Calls:
-- Interfaces to request services from the operating system kernel.
-- Examples in XV6: 'fork()', 'exit()', 'read()', 'write()'.
+- Interfaces to request services from the operating system kernel. 
+- Examples in XV6: 'fork()', 'exit()', 'read()', 'write()'. 
 
 Library Functions:
-- Pre-compiled routines providing higher-level abstractions.
-- Examples in XV6: 'printf()', 'malloc()', 'open()', 'memcpy()'.
+- Pre-compiled routines providing higher-level abstractions. 
+- Examples in XV6: 'printf()', 'malloc()', 'open()', 'memcpy()'. 
 
 15- 
 Memory Paging in XV6:
@@ -169,9 +169,9 @@ Simplifies Address Translation: Paging simplifies address translation, making it
 Enables Virtual Memory: Allows processes to have an illusion of a larger contiguous address space than the physical memory available.
 
 16- 
-ls: Lists files and directories in the current directory.
-cd: Changes the current working directory.
-cp: Copies files or directories.
+ls: Lists files and directories in the current directory. 
+cd: Changes the current working directory. 
+cp: Copies files or directories. 
 
 17- 
 Process Synchronization in XV6 is essential because it prevents conflicts and ensures orderly execution of processes that are sharing resources.
