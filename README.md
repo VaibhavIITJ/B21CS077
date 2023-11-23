@@ -128,6 +128,7 @@ Please write your answers here
 9- Both b and c
 10- No
 11- MIT
+
 12- In XV6 operating system, a process can be in the following 6 states:
     UNUSED: The process is not in use or has been terminated.
     EMBRYO: The process is in the process of being created but is not yet ready to run.
@@ -168,16 +169,12 @@ Simplifies Address Translation: Paging simplifies address translation, making it
 Enables Virtual Memory: Allows processes to have an illusion of a larger contiguous address space than the physical memory available.
 
 16- 
-ls:
-Purpose: Lists files and directories in the current directory.
-cd:
-Purpose: Changes the current working directory.
-cp:
-Purpose: Copies files or directories.
+ls: Lists files and directories in the current directory.
+cd: Changes the current working directory.
+cp: Copies files or directories.
 
 17- 
-Process Synchronization in XV6:
-It is essential because it prevents conflicts and ensures orderly execution of processes that are sharing resources.
+Process Synchronization in XV6 is essential because it prevents conflicts and ensures orderly execution of processes that are sharing resources.
 Mechanisms that are used to achieve process synchronization in XV6 are:
 Locks and Semaphores: Used to control access to shared resources.
 Atomic Operations: Ensures uninterruptible execution of critical sections.
@@ -185,3 +182,26 @@ Condition Variables: Allows processes to wait for a specific condition before pr
 Purpose: Avoids data corruption, race conditions, and ensures predictable program behavior.
 
 18- 
+Role of Interrupts in XV6:
+Handling Events: Interrupts are signals that notify the CPU about events, such as I/O completion or timer expiration.
+Interrupt Handling: Managed by interrupt service routines (ISRs) that respond to specific interrupt types.
+Significance: Enables asynchronous handling of events, efficient I/O, and multitasking by allowing the CPU to respond to external stimuli without actively polling.
+
+19- 
+Virtual Memory is an abstraction that provides processes with an illusion of a larger, contiguous address space than physical memory.
+It is implemented in XV6 through memory paging, where each process has its own page table which maps virtual addresses to physical addresses.
+Advantages of using virtual memory:
+Isolation: Processes have independent address spaces for security.
+Efficient Use of Memory: Allows swapping pages in and out of disk, utilizing physical memory effectively.
+Simplified Address Translation: Eases memory management and supports features like demand paging.
+
+20- 
+XV6 Boot Process:
+Power-On: Computer powered on. BIOS or UEFI firmware initiates the boot process.
+Bootloader (e.g., GRUB): It is loaded by firmware. It ocates and loads the XV6 kernel into memory.
+Kernel Initialization: Kernel initializes essential data structures. It sets up interrupt descriptor table (IDT) and interrupt handling.
+User-Space Init: Kernel starts the init process in user space. init becomes the first user-level process.
+User Programs: init spawns user-level processes and initializes the user environment.
+System Call Interface: User programs interact with the kernel through system calls.
+Execution: User processes execute, and the kernel manages hardware and resources.
+The XV6 operating system is now fully booted and operational.
