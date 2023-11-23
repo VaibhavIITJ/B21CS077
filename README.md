@@ -117,3 +117,71 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 
 ## Answers
 Please write your answers here
+1- A unix-like operating system
+2- BSD
+3- simple
+4- As interrupts
+5- 64 (not in the options listed) (NPROC 64)
+6- Sh
+7- Round-robin scheduling
+8- Paging
+9- Both b and c
+10- No
+11- MIT
+12- In XV6 operating system, a process can be in the following 6 states:
+    UNUSED: The process is not in use or has been terminated.
+    EMBRYO: The process is in the process of being created but is not yet ready to run.
+    SLEEPING: The process is waiting for an event to occur and is currently not eligible to run.
+    RUNNABLE: The process is ready to run but is not currently executing. It is in the queue of processes that are waiting for CPU time.
+    RUNNING: The process is currently being executed on the CPU.
+    ZOMBIE: The process has completed its execution, but its exit status has not yet been collected by its parent. It is waiting for its parent to acknowledge its termination.
+
+13- 
+XV6 File System Structure:
+Superblock: Contains essential file system information.
+Inode: Represents a file or directory, storing metadata.
+Directory: Special file mapping names to inodes.
+Data Blocks: Store actual file content.
+Block Bitmap and Inode Bitmap: Track free and allocated blocks and inodes.
+Log: Records changes for file system consistency.
+File Descriptor Table: Maintains open file information for processes.
+Buffer Cache: Caches frequently accessed disk blocks in memory.
+
+14- 
+System Calls:
+- Interfaces to request services from the operating system kernel.
+- Examples in XV6: 'fork()', 'exit()', 'read()', 'write()'.
+
+Library Functions:
+- Pre-compiled routines providing higher-level abstractions.
+- Examples in XV6: 'printf()', 'malloc()', 'open()', 'memcpy()'.
+
+15- 
+Memory Paging in XV6:
+XV6 uses a simple paging system where each process has its own page table.
+The page table maps virtual addresses to physical addresses.
+Pages are typically 4 KB in size, and the page table helps in translating virtual addresses to physical addresses during memory accesses.
+
+Benefits of Paging in Memory Management:
+Isolation: Each process has its own virtual address space, providing isolation and security.
+Simplifies Address Translation: Paging simplifies address translation, making it easier to manage memory and implement virtual memory systems.
+Enables Virtual Memory: Allows processes to have an illusion of a larger contiguous address space than the physical memory available.
+
+16- 
+ls:
+Purpose: Lists files and directories in the current directory.
+cd:
+Purpose: Changes the current working directory.
+cp:
+Purpose: Copies files or directories.
+
+17- 
+Process Synchronization in XV6:
+It is essential because it prevents conflicts and ensures orderly execution of processes that are sharing resources.
+Mechanisms that are used to achieve process synchronization in XV6 are:
+Locks and Semaphores: Used to control access to shared resources.
+Atomic Operations: Ensures uninterruptible execution of critical sections.
+Condition Variables: Allows processes to wait for a specific condition before proceeding.
+Purpose: Avoids data corruption, race conditions, and ensures predictable program behavior.
+
+18- 
